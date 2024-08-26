@@ -1,21 +1,52 @@
+@charset "utf-8";
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css");
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url("https//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "NanumBarunGothic", sans-serif;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+
 #root {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
-img {
-    vertical-align: top;
+.card_list {
+    width:230px;
+    height: 330px;
+    margin: 60px;
 }
-
 .card_img {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
 }
 .card_img::after {
-    content:"";
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -34,7 +65,46 @@ img {
     cursor: pointer;
 }
 
+.card_age {
+    padding: 0 4px;
+    border-radius: 3px;
+    background: #229C56;
+    color: #fff;
+    margin-right: 8px;
+}
+
 .card_tit {
     display: inline-block;
     margin: 0px;
+    margin: 16px 0;
+}
+.card_rate::after {
+    content: "|";
+    color: #D8D9DB;
+    padding: 0 8px;
+    vertical-align: top;
+}
+
+.card_btn{
+    margin-top:12px;
+}
+.card_btn button {
+    width: 70px;
+    height: 35px;
+    margin-right: 3px;
+    border-radius: 3px;
+    border: 1px solid #F3F3F3;
+}
+.card_btn button::before {
+    content: "\f004";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 8px;
+}
+.card_btn a {
+    display: inline-block;
+    width: 155px;
+    height: 35px;
+    background: #503396;
+    color: #fff;
+    border-radius: 3px;
 }
