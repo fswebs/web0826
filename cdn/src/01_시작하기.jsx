@@ -33,7 +33,7 @@ function Hello() {
                     style={{
                         padding: "0 4px",
                         borderRadius: "3px",
-                        background: "red",
+                        background: "#229C56",
                     }}
                 >
                     All
