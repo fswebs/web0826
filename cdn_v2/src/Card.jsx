@@ -1,7 +1,6 @@
-import cards from "./card_data";
-import Counter from "./Counter";
+// import Counter from "./Counter";
 
-function Card({ aimg, atit, aage, arate, adate }) {
+function Card({ aimg, atit, aage, arate, adate, aheart }) {
     return (
         <div className="card_list">
             <div className="card_img">
@@ -16,16 +15,11 @@ function Card({ aimg, atit, aage, arate, adate }) {
                 <span className="card_date">개봉일 {adate}</span>
             </div>
             <div className="card_btn">
-                {cards.map((card, index) => (
-                    <Counter
-                        key={index}
-                        aheart={card.cheart}
-                    />
-                ))}
+                <Counter aheart={aheart}/>
                 <a href="#">예매</a>
             </div>
         </div>
     );
 }
 
-export default Card;
+// export default Card;

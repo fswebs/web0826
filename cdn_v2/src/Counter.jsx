@@ -9,4 +9,4 @@ function Counter({ aheart }) {
     return <button onClick={onClick}>{aheart + counter}</button>;
 }
 
-export default Counter;
+// export default Counter;
