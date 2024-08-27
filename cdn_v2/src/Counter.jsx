@@ -1,22 +1,12 @@
-import Card from "./card";
+// counter
 
-function Counter(){
-    return (
-        const btn = <button></button>
-        for (const x of heartBtn) {
-            x.onclick = () => {
-                console.log(x.innerText);
-                if (parseInt(x.innerText) > 998 || x.innerText.indexOf("k") > 0) {
-                    x.innerText = "1k";
-                } else {
-                    x.innerText = parseInt(x.innerText) + 1;
-                }
-                // heart color change
-                x.classList.toggle("on");
-                setInterval(() => {
-                    x.classList.remove("on");
-                }, 1000);
-            };
-        }
-    );
+function Counter({ aheart }) {
+    let [counter, setCounter] = React.useState(0);
+    const onClick = () => {
+        setCounter((num) => num + 1);
+    };
+
+    return <button onClick={onClick}>{aheart + counter}</button>;
 }
+
+export default Counter;
