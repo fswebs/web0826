@@ -23,6 +23,7 @@ a {
     text-decoration: none;
     text-align: center;
     line-height: 35px;
+    vertical-align: top;
 }
 button {
     border: none;
@@ -99,6 +100,9 @@ button {
     content: "\f004";
     font-family: "Font Awesome 5 Free";
     margin-right: 8px;
+}
+.card_btn button.on::before {
+    color: red;
 }
 .card_btn a {
     display: inline-block;

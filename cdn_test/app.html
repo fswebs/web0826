@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01_CDN 방식으로 리액트 시작하기</title>
-    <link rel="stylesheet" href="./src/01_시작하기.css">
+    <link rel="stylesheet" href="./src/app.css">
 
     <!-- 리액트 인터랙티브 UI 만들다. -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -18,10 +18,9 @@
 
     <!-- type="text/babel" -> JSX코드 인식 -->
     <!-- 확장자는 .jsx 또는 .js -->
-    <script type="text/babel" src="./src/card.jsx"></script>
-    <script type="text/babel" src="./src/counter.js">
-
-    </script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/data.js"></script>
+    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/card.jsx"></script>
+    <script type="text/babel" src="./src/counter.js"></script>
 </head>
 
 <body>
