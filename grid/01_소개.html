@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 레이아웃</title>
+    <style>
+        /* 그리드 레이아웃
+        CSS 그리드 레이아웃 모듈은 행과 열로 구성된 그리드 기반 레이아웃 시스템을 제공하므로 float 및 위치 지정을 사용하지 않고도 웹 페이지를 쉽게 디자인할 수 있습니다. */
+        /* https://www.w3schools.com/CSS/css_grid.asp */
+
+        /* 
+            그리드 구성 요소
+                열(column) - 그리드 아이템의 수직선
+                행(row) - 그리드 아이템의 수평선
+
+                그리드 라인
+                    Column Lines - 열 사이 선
+                    Row Lines - 행 사이 선
+
+        */
+
+        /* 
+            그리드 컨테이너에 적용 -> display: gird   
+
+                갭(gap) - 열/행 사이 공간
+                    column-gap
+                    row-gap
+                    gap: 값;
+                    gap: 행값 열값;
+                
+        */
+
+        /* 
+            그리드 아이템에 적용
+
+                그리드 병합
+                    grid-column-start
+                    grid-column-end
+                    grid-row-start
+                    grid-row-end
+        */
+        
+        .grid-container {
+            /* 부모 요소에 display: grid 지정 -> 자식 요소는 자동으로 그리드 아이템이 된다.  */
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+            /* 열 간격 */
+            /* column-gap: 50px;
+            row-gap: 50px; */
+            /* gap: 행값 열값 */
+            gap: 50px 100px;
+            /* gap: 50px; */
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .item1 {
+            /* .item1의 그리드 라인 1열부터 3열까지 병합 */
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+        <div class="grid-item item6">6</div>
+        <div class="grid-item item7">7</div>
+        <div class="grid-item item8">8</div>
+    </div>
+</body>
+
+</html>
