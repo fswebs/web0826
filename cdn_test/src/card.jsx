@@ -1,3 +1,4 @@
+import mdata from "./src/data";
 /*  
     1. 컴포넌트 형식
       function 컴포넌트(){
@@ -9,7 +10,7 @@
 */
 
 // 컴포넌트 생성
-function Hello() {
+function Hello(props) {
     // 리턴 뒤에 한 줄 문장
     // return <h1>Hello World!</h1>
     // 리턴 뒤에 두 줄 이상의 문장은 ( ); 로 묶고 문장 끝 ; 쓴다.
@@ -20,8 +21,8 @@ function Hello() {
             {/* XML에서 빈 요소는 끝에 <img /> */}
             <div className="card_img">
                 <img
-                    src="https://img.megabox.co.kr/SharedImg/2024/07/03/QaslTt607PkNH8mPWm6ZUH3UwDx2bHoH_420.jpg"
-                    alt="사랑의 하츄핑"
+                    src={props.aimg}
+                    alt={props.atit}
                 />
             </div>
             <div>
@@ -31,7 +32,7 @@ function Hello() {
                 {/* 속성명은 카멜표기법으로 쓴다. 예) borderRadius 또는 "border-radius" */}
                 <span className="card_age">All</span>
                 {/* class -> className 으로 기록한다.*/}
-                <h3 className="card_tit">사랑의 하츄핑</h3>
+                <h3 className="card_tit">{props.atit}</h3>
             </div>
             <div>
                 <span className="card_rate">예매율 1%</span>

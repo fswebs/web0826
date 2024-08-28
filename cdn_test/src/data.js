@@ -36,3 +36,5 @@ const mdata = [
         cheart: 990
     },
 ];
+
+export default mdata;
