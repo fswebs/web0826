@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01_CDN 방식으로 리액트 시작하기</title>
+    <title>card_app</title>
     <link rel="stylesheet" href="./src/card.css">
 
     <!-- 리액트 인터랙티브 UI 만들다. -->
@@ -18,9 +18,11 @@
 
     <!-- type="text/babel" -> JSX코드 인식 -->
     <!-- 확장자는 .jsx 또는 .js -->
-    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/card.jsx"></script>
-    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/data.js"></script>
-    <script type="text/babel" data-plugins="transform-modules-umd" src="./src/counter.js"></script>
+     <!-- data-plugins="transform-modules-umd"  -->
+    <script type="text/babel" src="./src/card_data.jsx"></script>
+    <script type="text/babel" src="./src/Card.jsx"></script>
+    <script type="text/babel" src="./src/Counter.jsx"></script>
+    <script type="text/babel" src="./src/App.jsx"></script>
 </head>
 
 <body>

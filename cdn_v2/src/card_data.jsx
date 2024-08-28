@@ -2,7 +2,7 @@
 // m: movie
 // c: card
 
-const mdata = [
+const cards = [
     {
         cimg: "https://img.megabox.co.kr/SharedImg/2024/07/03/QaslTt607PkNH8mPWm6ZUH3UwDx2bHoH_420.jpg",
         ctit: "사랑의 하츄핑",
@@ -37,4 +37,4 @@ const mdata = [
     },
 ];
 
-export default mdata;
+// export default cards;
