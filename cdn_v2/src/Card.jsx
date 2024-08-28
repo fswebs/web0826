@@ -11,7 +11,7 @@ function Card({ aimg, atit, aage, arate, adate, aheart }) {
                 <h3 className="card_tit">{atit}</h3>
             </div>
             <div>
-                <span className="card_rate">{arate}%</span>
+                <span className="card_rate">예매율 {arate}%</span>
                 <span className="card_date">개봉일 {adate}</span>
             </div>
             <div className="card_btn">

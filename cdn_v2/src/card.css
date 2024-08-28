@@ -79,7 +79,7 @@ button {
 .card_rate::after {
     content: "|";
     color: #D8D9DB;
-    padding: 0 8px;
+    padding: 0 4px;
     vertical-align: top;
 }
 
