@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 레이아웃</title>
+    <style>
+        body,ul {margin:0;}
+        ul {padding:0; list-style:none;}
+        li {width: 230px; height: 330px;}
+
+        #root {
+            display: grid;
+            height: 100vh;
+            background-color: #2196F3;
+        }
+
+        .card-list {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            align-content: center;
+            column-gap: 60px;
+        }
+        .card-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            font-size: 30px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <ul class="card-list">
+            <li class="card-item item1">item1</li>
+            <li class="card-item item2">item2</li>
+            <li class="card-item item3">item3</li>
+            <li class="card-item item4">item4</li>
+        </ul>
+    </div>
+</body>
+
+</html>

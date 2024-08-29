@@ -27,7 +27,14 @@
         .grid-container {
             /* 부모 요소에 display: grid 지정 -> 자식 요소는 자동으로 그리드 아이템이 된다.  */
             display: grid;
-            grid-template-columns: auto auto auto auto;
+            /* 명명된 그리드 항목 이름은 그리드 컨테이너의 속성으로 참조 */
+            /* 각 행의 열은 따옴표 정의하며 공백으로 구분한다. */
+            /* 마침표 기호는 이름이 없는 그리드 항목을 나타낸다. */
+            /* 두 행을 정의하려면 두 번째 행의 열을 또 다른 따옴표 세트 안에 정의한다. */
+            grid-template-areas: 
+                'header header header header' 
+                'item . . .' 
+                'footer footer footer footer';
             background-color: #2196F3;
             padding: 10px;
 
@@ -41,25 +48,29 @@
             text-align: center;
         }
 
-        .item2 {
-            /* grid-area: 행시작 / 열시작 / 행끝 / 열끝 */
-            /* grid-area: 1 / 2 / 3 / 4; */
-            grid-area: 1/2/span 2/span 2;
+        .header {
+            /* grid-area: 그리드 항목 이름 지정 */
+            grid-area: header;
         }
-        
+
+        .item1 {
+            grid-area: item;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
     </style>
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="grid-item item1">1</div>
-        <div class="grid-item item2">2</div>
-        <div class="grid-item item3">3</div>
-        <div class="grid-item item4">4</div>
-        <div class="grid-item item5">5</div>
-        <div class="grid-item item6">6</div>
-        <div class="grid-item item7">7</div>
-        <div class="grid-item item8">8</div>
+        <div class="grid-item header">header</div>
+        <div class="grid-item item1">item1</div>
+        <div class="grid-item item2">item2</div>
+        <div class="grid-item item3">item3</div>
+        <div class="grid-item item4">item4</div>
+        <div class="grid-item footer">footer</div>
     </div>
 </body>
 
