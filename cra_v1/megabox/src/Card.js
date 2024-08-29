@@ -1,5 +1,4 @@
 import Counter from "./Counter";
-import "./Card.module.css"
 
 function Card({ aimg, atit, aage, arate, adate, aheart }) {
     return (

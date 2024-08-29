@@ -1,0 +1,23 @@
+리액트 빌드(build)
+
+1. gh-pages 패키지 프로그램 추가 -> github pages에 빌드한 결과 업로드
+>npm i gh-pages
+
+2. 깃 레파지토리 이름 확인
+>git remote -v 
+
+3. package.json의 맨 끝 "}" 위에 아래 내용 추가
+    },
+    "homepage": "https://id.github.io/레파지토리명
+}
+
+4. package.json의 scripts에 내용 추가
+"scripts": {
+    // deploy 명령어로 깃 페이지에 빌드 업로드
+    "deploy": "gh-pages -d build",
+    // predeploy 명령어로 deploy 전에 빌드 폴더 생성
+    "predeploy": "npm run build"
+}
+
+5. 빌드 & 깃 업로드
+>npm run deplay
