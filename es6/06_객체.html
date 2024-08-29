@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <style>
+        img {
+            width: 230px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /* 
+            데이터 유형
+                1. 원시(primitive)형
+                    - 숫자: 자연수, 정수, 실수, NaN
+                    - 문자열: "" 또는 ''
+                    - 불: true, false
+                    - undefined: undefined
+                2. 참조(reference)형
+                    함수: function(){}
+                    객체: {}, [], null
+            
+            생성자함수
+
+            객체 생성
+                1. 리터럴
+
+                    const 객체 = {
+                        속성: 값,
+                        속성: 값,
+                        속성: function(){},
+                        ...
+                    }
+
+                2. new 생성자함수
+
+            객체 접근
+                객체.속성
+                객체["속성"]
+        */
+
+        // 내장 객체: Date, Array, Object, Math, String, ...
+
+        // 배열
+        const person = [
+            "요기 베라",
+            "1925년 5월 12일",
+            "It ain't over till it's over(끝날 때까지는 끝난 게 아니다)."
+        ];
+
+        // 배열의 참조는 배열[색인번호]로 한다.
+        // 빽틱, 보간법 -> ${표현식}
+        document.write(`${person[0]}가 말한 명언 중 최고의 명언은 ${person[3]}이다.`);
+
+        person[3] = 8;
+        document.write(`${person[0]}의 등번호는 ${person[3]}번이다.`);
+
+        console.log(person);
+
+        document.write("<hr>");
+
+        // x는 배열의 아이템
+        for (const x of person) {
+            document.write(x);
+        }
+
+
+        document.write("<hr>");
+
+        // 객체 리터럴
+        // 인스턴스(객체) 생성
+        const mb1 = {
+            "영화이미지": '<img src="https://img.megabox.co.kr/SharedImg/2024/07/03/QaslTt607PkNH8mPWm6ZUH3UwDx2bHoH_420.jpg" alt="사랑의 하츄핑">',
+            "연령": "ALL",
+            "영화제목": "사랑의 하츄핑",
+            예매율: "2.6%",
+            "개봉일": "2024.08.07",
+            "좋아요!": 495
+        };
+
+        // 객체 참조(접근, access)
+        // 객체.속성 또는 객체["속성"]
+
+        // x는 속성명, mb1.x는 속성값이다.
+
+        document.write(`<ul>`);
+        for (const x in mb1) {
+            console.log(x);
+            document.write(`<li>${x}: ${mb1[x]}</li>`);
+        }
+        document.write(`</ul>`);
+
+
+        const mb2 = {};
+        console.log("입력전: ", mb2);
+        mb2["영화이미지"] = '<img src="https://img.megabox.co.kr/SharedImg/2024/05/20/1sr0K2rHmhPhuUWHk5fXiP0BJ0i0EMS8_420.jpg" alt="가필드 더 무비">';
+        mb2["연령"] = "ALL";
+        mb2["영화제목"] = "가필드 더 무비";
+        mb2["예매율"] = "1.2%";
+        mb2["개봉일"] = "2024.05.15";
+        mb2["좋아요"] = "485";
+
+        document.write(`<ul>`);
+        for (const x in mb2) {
+            console.log(x);
+            document.write(`<li>${x}: ${mb2[x]}</li>`);
+        }
+        document.write(`</ul>`);
+
+
+        // new 생성자함수
+        const mb3 = new Object({
+            "영화이미지": '<img src="https://img.megabox.co.kr/SharedImg/2024/07/03/QaslTt607PkNH8mPWm6ZUH3UwDx2bHoH_420.jpg" alt="사랑의 하츄핑">',
+            "연령": "ALL",
+            "영화제목": "사랑의 하츄핑",
+            예매율: "2.6%",
+            "개봉일": "2024.08.07",
+            "좋아요!": 495
+        });
+
+        console.log("난 mb3: ", mb3);
+
+        const mb4 = new Object({
+            "영화이미지": 'https://img.megabox.co.kr/SharedImg/2024/06/24/RZWMFjfujP4iNHOxih6UHFqE62ApTmbV_420.jpg',
+            "연령": "ALL",
+            "영화제목": "슈퍼배드 4",
+            예매율: "0.4%",
+            "개봉일": "2024.07.24",
+            "좋아요!": 1100
+        });
+
+        console.log("난 mb4: ", mb4);
+
+    </script>
+</body>
+
+</html>

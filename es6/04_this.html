@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수와 this</title>
+</head>
+
+<body>
+    <button>red</button>
+    <button>green</button>
+    <button>blue</button>
+
+    <script>
+        /* 
+            class(클래스)의 경우 this는 아래와 다르다.
+                속성의 값이 일반 함수인 경우
+                    이벤트 발생시 this는 이벤트를 발생한 자신이다.
+                속성의 값이 화살표 함수인 경우
+                    this를 가지고 있는 객체 자신이다.
+
+                    
+            함수 호출 시
+                this는 window
+
+            이벤트 발생시
+                this: 
+                    - 일반 함수일 경우 window, 
+                    - 화살표 함수의 경우 이벤트를 발생한 자신
+                event.currentTarget
+                    - 일반 함수, 화살표 함수 모두 이벤트를 발생한 자신
+        */
+
+        /* 
+            문제> 버튼을 클릭하면 
+            버튼에 쓰인 이름의 색으로 
+            배경색 지정하기            
+        */
+
+        const btn = document.querySelectorAll("button");
+
+        // 매개변수가 없을 경우 두 문장은 같은 문장이다.
+        // 매개변수(인수)가 있을 경우
+        //btn[0].onclick = function(){fn()};
+        // 매개변수(인수)가 없을 경우
+
+        // 버튼 클릭하면
+        btn[0].onclick = fn;
+
+        function fn() {
+            // 버튼에 쓰인 이름의 색으로 가져오기
+            const text = btn[0].innerText;
+            // 배경색 body에 지정하기
+            document.body.style.backgroundColor = text;
+
+            console.log("선언적함수 this", this);
+            console.log("선언적함수 event.currentTarget", event.currentTarget);
+        }
+
+        btn[1].onclick = function () {
+            // 버튼에 쓰인 이름의 색으로 가져오기
+            const text = btn[1].innerText;
+            // 배경색 body에 지정하기
+            document.body.style.backgroundColor = text;
+            console.log("익명함수 this", this);
+            console.log("익명함수 event.currentTarget", event.currentTarget);
+        }
+        btn[2].onclick = () => {
+            // 버튼에 쓰인 이름의 색으로 가져오기
+            const text = btn[2].innerText;
+            // 배경색 body에 지정하기
+            document.body.style.backgroundColor = text;
+            console.log("화살표함수 this", this);
+            console.log("화살표함수 event.currentTarget", event.currentTarget);
+        }
+
+    </script>
+</body>
+
+</html>

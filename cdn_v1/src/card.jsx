@@ -10,7 +10,7 @@ import counter from "./counter";
       가. 컴포넌트 이름의 첫 글자는 대문자로 쓴다.
       나. JSX의 태그 끝에는 ; 을 쓰지 않는다.
 */
-// 컴포넌트 생성
+// 컴포넌트 생성 -> 구조 분해
 function Hello({ aimg, atit, aage, arate, adate, aheart }) {
     // 리턴 뒤에 한 줄 문장
     // return <h1>Hello World!</h1>

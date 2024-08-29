@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+</head>
+
+<body>
+    <script>
+        /*
+            생성자(constructor)
+                1. 함수이다.
+                2. 속성과 메서드를 직접 기록
+                3. 생성자명의 첫 글자는 대문자
+                4. 속성 중 속성의 값이 function(){} 경우를 메서드라 한다.
+
+                function 함수명(변수) {
+                    this.속성 = 변수;
+                    this.속성 = function(){};
+                }
+
+
+            클래스(class)
+                1. 함수의 한 유형이다.
+                2. constructor()로 속성을 정의한다.
+                3. 클래스명의 첫 글자는 대문자
+                4. 속성과 다르게 메서드는 별도 지정한다.
+
+                class 클래스명 {
+                    constructor(변수) {
+                        this.속성 = 변수;
+                    }
+                    메서드() { 
+                        return ... ;
+                    }
+                }
+        */
+
+        class Mb {
+            // constructor() -> 속성 정의
+            constructor(mbimg, mbrank, mbtit, mbrate, mbdate, mbheart) {
+                this.이미지 = mbimg;
+                this.관람등급 = mbrank;
+                this.제목 = mbtit;
+                this.예매율 = mbrate;
+                this.개봉일 = mbdate;
+                this.좋아요 = mbheart;
+            }
+
+            choice() {
+                return document.write(`당신이 선택한 영화는 ${this.제목}입니다.`);
+            }
+        }
+
+        const mb = new Mb("https://img.megabox.co.kr/SharedImg/2024/08/01/BUsWispT4T7lkUapLBCGyK17FuX5kKk6_420.jpg", "12", "파일럿", "4.1%", "2024.07.31", "1.5k");
+
+        // 콘솔 출력
+        console.log("객체 생성 결과: ", mb);
+
+        // 화면 출력
+        // for ~ in
+        // x는 속성, 값은 객체.속성 또는 객체["속성"]
+
+        document.write("<ul>");
+        for (const x in mb) {
+            // x가 이미지와 같으면 통과
+            if (x === "이미지") continue;
+            document.write(`<li>${x} : ${mb[x]}</li>`);
+        }
+        mb.choice();
+        document.write("</ul>");
+    </script>
+</body>
+
+</html>
