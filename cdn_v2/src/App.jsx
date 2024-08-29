@@ -3,7 +3,7 @@
 
 function App() {
     return (
-        <div style={{ display: "flex" }}>
+        <div className="container">
             {cards.map((card, index) => (
                 <Card
                     key={index}

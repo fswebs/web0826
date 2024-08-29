@@ -6,10 +6,11 @@
 * {
     box-sizing: border-box;
 }
-
+body,ul {margin: 0;}
 body {
     font-family: "NanumBarunGothic", sans-serif;
 }
+ul {padding:0; list-style: none;}
 img {
     width: 100%;
     height: 100%;
@@ -28,15 +29,18 @@ button {
 }
 
 #root {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 60px;
 }
 .card_list {
     width:230px;
-    height: 330px;
-    margin: 60px;
 }
 .card_img {
     position: relative;
