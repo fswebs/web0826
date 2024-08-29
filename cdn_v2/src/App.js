@@ -1,5 +1,5 @@
-import cards from "./card_data";
-import Card from "./card";
+// import cards from "./card_data";
+// import Card from "./card";
 
 function App() {
     return (
