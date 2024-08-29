@@ -1,4 +1,5 @@
-// import Counter from "./Counter";
+import Counter from "./Counter";
+import "./Card.module.css"
 
 function Card({ aimg, atit, aage, arate, adate, aheart }) {
     return (
@@ -22,4 +23,4 @@ function Card({ aimg, atit, aage, arate, adate, aheart }) {
     );
 }
 
-// export default Card;
+export default Card;

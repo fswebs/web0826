@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import cards from './card_data';
+import Card from './Card';
 
 function App() {
   return (
@@ -18,7 +18,5 @@ function App() {
       </div>
   );
 }
-
-ReactDOM.render(<App />, document.querySelector("#root"));
 
 export default App;
