@@ -20,4 +20,4 @@
 }
 
 5. 빌드 & 깃 업로드
->npm run deplay
+>npm run deploy

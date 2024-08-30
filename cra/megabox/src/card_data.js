@@ -1,4 +1,5 @@
 // Megabox Movie data.js
+// m: movie
 // c: card
 
 const cards = [
@@ -36,4 +37,4 @@ const cards = [
     },
 ];
 
-// export default cards;
+export default cards;
