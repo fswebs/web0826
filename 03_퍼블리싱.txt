@@ -14,8 +14,8 @@
 4. package.json의 scripts에 내용 추가
 "scripts": {
     // deploy 명령어로 깃 페이지에 빌드 업로드
-    "deploy": "gh-pages -d build",
     // predeploy 명령어로 deploy 전에 빌드 폴더 생성
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
 }
 
