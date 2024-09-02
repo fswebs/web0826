@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/PUBLIC_URL/static/js/main.dec5a205.js",
-    "index.html": "/PUBLIC_URL/index.html",
-    "main.dec5a205.js.map": "/PUBLIC_URL/static/js/main.dec5a205.js.map"
+    "main.js": "/web0826/static/js/main.2d3c2ea6.js",
+    "index.html": "/web0826/index.html",
+    "main.2d3c2ea6.js.map": "/web0826/static/js/main.2d3c2ea6.js.map"
   },
   "entrypoints": [
-    "static/js/main.dec5a205.js"
+    "static/js/main.2d3c2ea6.js"
   ]
 }
