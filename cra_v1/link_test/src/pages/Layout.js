@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 
-const Nav = () => {
+const Layout = () => {
   return (
     <>
       <h1 className="logo"><Link to="/">Logo</Link></h1>
@@ -20,4 +20,4 @@ const Nav = () => {
   )
 };
 
-export default Nav;
+export default Layout;
