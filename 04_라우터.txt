@@ -1,0 +1,48 @@
+라우터(Router) v6
+
+Create React App에는 페이지 라우팅이 포함되어 있지 않습니다.
+
+React Router 추가
+>npm i -D react-router-dom
+
+v5에서 업그레이드
+>npm i -D react-router-dom@latest
+
+
+폴더 구조
+src\pages\:
+
+Layout.js
+Home.js
+Blogs.js
+Contact.js
+NoPage.js
+
+src\:
+index.js
+
+
+index.js
+형식:
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
+    1. <BrowerRouter>
+    2. <Routes>
+    3. <Route path="경로" element={컴포넌트}>
+        (1) <Route>안의 <Route>는 부모 경로를 상속 받는다.
+            -> path="blogs"는 부모 경로를 상속 받아 "/blogs"가 된다.
+
+
+Nav.js
+
+    <Link to="/경로">메뉴</Link> -> URL 설정 및 검색 기록 추적
+    <Outlet /> -> 현재 선택된 경로를 렌더링
