@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Movie from "./pages/Movie";
 import Reservation from "./pages/Reservation";
 import Theater from "./pages/Theater";
@@ -9,7 +10,16 @@ import Membership from "./pages/Membership";
 import NoPage from "./pages/NoPage";
 import Layout from "./pages/Layout";
 
+let currentPath = "";
 export default function App() {
+  let location = useLocation();
+
+  useEffect(() => {
+    if(currentPath === location.pathname) window.location.reload();
+     
+    currentPath = location.pathname;
+  }, [location]);
+
   return (
     <BrowserRouter>
       <Routes>
